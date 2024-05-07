@@ -11,8 +11,6 @@ import Frens from './views/frens';
 import Earn from './views/earn';
 // import SquadAdmin from './views/squad-admin';
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,7 +38,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+export function App() {
   return (
     <>
       <div className={cn("flex flex-col min-h-full p-4")}>
