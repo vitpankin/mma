@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  // background-color: #0f8a81;
+  height: 100%;
+}
+body {
+  background-image: url(./../media/back.jpg);
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+  min-height: 100%;
+  width: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Manrope", sans-serif;
+
+  &::before {
+    content: "";
+    background: linear-gradient(180deg, rgba(15, 18, 19, 0) 0%, rgba(0, 3, 4, 0.70) 86.5%);
+    background-blend-mode: multiply;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+#root {
+  position: relative;
+  z-index: 2;
+}
+
+#gray-backdrop {
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./../media/back.jpg);
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: repeat-y;
+    min-height: 100%;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    z-index: 0;
+  }
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #002b4a;
+    opacity: 0.2;
+    z-index: 0;
+  }
+  & > * {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+#darkgray-backdrop {
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./../media/back.jpg);
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: repeat-y;
+    min-height: 100%;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    z-index: 0;
+  }
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000115;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  & > * {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+#toncoin > div:first-child > div:first-child {
+  background: fixed;
+
+  img {
+    width: 100px;
+    height: auto;
+    position: relative;
+    transform: translateX(0px) translateY(0px);
+    max-width: 100px;
+  }
+}
+
+#invite-friend {
+  &:after {
+    content: "";
+    background-image: url("./../media/cat.png");
+    background-repeat: no-repeat;
+    background-size: 57px auto;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 15.5px;
+    left: 14px;
+    @include transition-property(0.5s, all, 0.1s);
+  }
+}
+
+
+.ring {
+  height: 90px;
+  width: 90px;
+  background: url("../media/rings.png");
+  background-size: auto 91.5px;
+  background-position: -2px center;
+  animation: spin .4s step-start infinite;
+  transition: none;
+  outline: none;
+  box-shadow: none;
+  transform: scale(0.5);
+}
+
+@keyframes spin {
+  0% {
+    background-position: -2px center;
+  } 5% {
+    background-position: -92px center;
+  } 10% {
+    background-position: -184px center;
+  } 15% {
+    background-position: -279px center;
+  } 20% {
+    background-position: -373px center;
+  } 25% {
+    background-position: -466px center;
+  } 30% {
+    background-position: -562px center;
+  } 35% {
+    background-position: -656px center;
+  } 40% {
+    background-position: -755px center;
+  } 45% {
+    background-position: -852px center;
+  } 50% {
+    background-position: -950px center;
+  } 55% {
+    background-position: -1045px center;
+  } 60% {
+    background-position: -1140px center;
+  } 65% {
+    background-position: -1236px center;
+  } 70% {
+    background-position: -1334px center;
+  } 75% {
+    background-position: -1431px center;
+  } 80% {
+    background-position: -1533px center;
+  } 85% {
+    background-position: -1632px center;
+  } 90% {
+    background-position: -1732px center;
+  } 95% {
+    background-position: -1823.5px center;
+  } 
+}
