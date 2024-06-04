@@ -18,13 +18,13 @@ import { initNavigator } from '@tma.js/sdk-react';
 import { useEffect, useMemo } from 'react';
 
 
-const Main = React.lazy(() => import("./views/Main"));
-const MainIndex = React.lazy(() => import("./views/MainIndex"));
-const Squad = React.lazy(() => import("./views/Squad"));
-const SquadAdmin = React.lazy(() => import("./views/SquadAdmin"));
-const Frens = React.lazy(() => import("./views/Frens"));
-const Earn = React.lazy(() => import("./views/Earn"));
-const Splash = React.lazy(() => import("./views/Splash"));
+const Main = React.lazy(() => import("./views/Main_"));
+const MainIndex = React.lazy(() => import("./views/MainIndex_"));
+const Squad = React.lazy(() => import("./views/Squad_"));
+const SquadAdmin = React.lazy(() => import("./views/SquadAdmin_"));
+const Frens = React.lazy(() => import("./views/Frens_"));
+const Earn = React.lazy(() => import("./views/Earn_"));
+const Splash = React.lazy(() => import("./views/Splash_"));
 
 export function App() {
   const navigator = useMemo(() => initNavigator('app-navigation-state'), []);
