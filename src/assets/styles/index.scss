@@ -11,21 +11,23 @@ html, body, #root {
   padding: 0;
 }
 html {
-  // background-color: #0f8a81;
   height: 100%;
 }
 body {
-  background-image: url(./../media/back.jpg);
+  // background-image: url(./../media/back.jpg);
+  background: black;
   background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat-y;
   min-height: 100%;
   width: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Manrope", sans-serif;
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
 
   &::before {
     content: "";
-    background: linear-gradient(180deg, rgba(15, 18, 19, 0) 0%, rgba(0, 3, 4, 0.70) 86.5%);
+    // background: linear-gradient(180deg, rgba(15, 18, 19, 0) 0%, rgba(0, 3, 4, 0.70) 86.5%);
     background-blend-mode: multiply;
     position: fixed;
     top: 0;

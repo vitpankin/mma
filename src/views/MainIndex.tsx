@@ -10,7 +10,7 @@ import {
 import { Slider } from "../components/Slider";
 
 
-export const Main = () => {
+export const MainIndex = () => {
   return (<>
 
 <div className={cn("fixed z-50 bottom-0 w-full left-0 p-4")}>
@@ -24,14 +24,15 @@ export const Main = () => {
         </menu>
       </div>
   <div className="flex flex-col gap-4 pb-[90px]">
-    <Link to="/squad"><Button
+  <div className="px-4 py-16 text-5xl text-white font-bold flex flex-row justify-center items-center gap-2"> <div className="ring ml-[-20px]"></div> <div className="ml-[-20px]">NaN</div></div>
+    {/* <Link to="/squad"><Button
       size="large"
       color="primary"
       className="w-full !bg-[transparent]"
       style={{background: "none"}}
     >Найти отряд</Button></Link>
 
-    <div className="px-4 py-16 text-5xl text-white font-bold flex flex-row justify-center items-center gap-2"> <div className="ring ml-[-20px]"></div> <div className="ml-[-20px]">5,000</div></div>
+    
     <Slider>
       <div className="flex flex-col bg-[#101416]/30 text-white w-full shrink-0 px-4 py-4 gap-4 rounded-xl">
         <div className="flex flex-row justify-between items-center">
@@ -57,7 +58,7 @@ export const Main = () => {
           // style={{background: "none"}}
         >Подключить кошелек</Button></Link>
       </div>
-    </Slider>
+    </Slider> */}
     
     {/* <div className="flex flex-col gap-2">
       <span className="text-white font-medium">Followed Boards</span>
@@ -103,4 +104,4 @@ export const Main = () => {
 };
   
 
-export default Main;
+export default MainIndex;

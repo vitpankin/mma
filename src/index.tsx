@@ -3,14 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './assets/styles/index.scss';
 import App from './app';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import reportWebVitals from './reportWebVitals';
+import { FirestoreProvider } from './cloud/firebase';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const queryClient = new QueryClient();
+
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <QueryClientProvider client={queryClient}> */}
+      {/* <FirestoreProvider> */}
+        <App />
+      {/* </FirestoreProvider> */}
+    {/* </QueryClientProvider> */}
   </React.StrictMode>
 );
 
