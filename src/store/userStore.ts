@@ -1,6 +1,6 @@
 import { StateCreator } from 'zustand'
 
-import { User } from '../models/interfaces'
+import { User } from '../types/interfaces'
 import { CombinedSlice } from './store'
 
 export interface UserSlice {

@@ -16,15 +16,16 @@ import {
 import { useIntegration } from '@tma.js/react-router-integration';
 import { initNavigator } from '@tma.js/sdk-react';
 import { useEffect, useMemo } from 'react';
+import { Splash } from "./views/Splash";
 
 
-const Main = React.lazy(() => import("./views/Main_"));
-const MainIndex = React.lazy(() => import("./views/MainIndex_"));
-const Squad = React.lazy(() => import("./views/Squad_"));
-const SquadAdmin = React.lazy(() => import("./views/SquadAdmin_"));
-const Frens = React.lazy(() => import("./views/Frens_"));
-const Earn = React.lazy(() => import("./views/Earn_"));
-const Splash = React.lazy(() => import("./views/Splash_"));
+const Main = React.lazy(() => import("./views/Main"));
+const MainIndex = React.lazy(() => import("./views/MainIndex"));
+const Squad = React.lazy(() => import("./views/Squad"));
+const SquadAdmin = React.lazy(() => import("./views/SquadAdmin"));
+const Frens = React.lazy(() => import("./views/Frens"));
+const Earn = React.lazy(() => import("./views/Earn"));
+// const Splash = React.lazy(() => import("./views/Splash"));
 
 export function App() {
   const navigator = useMemo(() => initNavigator('app-navigation-state'), []);
@@ -38,14 +39,14 @@ export function App() {
   return (
     <Router location={location} navigator={reactNavigator}>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Splash />}>
           <Route
             index
             element={
-              <React.Suspense fallback={<Splash />}>
+              <React.Suspense fallback={<>...</>}>
                 <Splash />
               </React.Suspense>
-          }
+            }
           />
           <Route
             path="frens"

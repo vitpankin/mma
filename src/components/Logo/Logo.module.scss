@@ -1,0 +1,90 @@
+@import '../../assets/styles/mixins.scss';
+
+.ring {
+  fill: var(--tg-theme-text-color);
+  height: 2rem;
+  width: 2rem;
+  -webkit-filter: drop-shadow( 0px 0px 7px rgba(#00A99D, .5));
+  filter: drop-shadow( 0px 0px 7px rgba(#00A99D, .5));
+
+  * {
+    fill: var(--tg-theme-text-color);
+    // -webkit-filter: drop-shadow( 0px 30px 20px rgba(0, 0, 0, .7));
+    // filter: drop-shadow( 0px 30px 20px rgba(0, 0, 0, .7));
+  }
+}
+
+.ring-one {
+  transform: translateX(0rem);
+  animation: logo-ring-one 4s cubic-bezier(0.375, 0.885, 0.6, 1) infinite;
+}
+.ring-two {
+  transform: translateX(.35rem);
+  animation: logo-ring-two 4s cubic-bezier(0.375, 0.885, 0.6, 1) infinite;
+}
+.ring-three {
+  transform: translateX(1.8rem);
+  animation: logo-ring-three 4s cubic-bezier(0.375, 0.885, 0.6, 1) infinite;
+}
+
+.logo {
+  position: relative;
+  transform: translateX(-1.5rem) translateY(-1rem) scale(2);
+  width: 2rem;
+  height: 2rem;
+  // background: aqua;
+
+  .ring {
+    position: absolute;
+    // background: aqua;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes logo-ring-one {
+  0% {
+    transform: translateX(0rem)
+  } 20% {
+    transform: translateX(.35rem)
+  } 40% {
+    transform: translateX(.35rem)
+  } 60% {
+    transform: translateX(1.8rem)
+  } 80% {
+    transform: translateX(1.8rem)
+  } 100% {
+    transform: translateX(0rem)
+  }
+}
+@keyframes logo-ring-two {
+  0% {
+    transform: translateX(.35rem)
+  } 20% {
+    transform: translateX(0rem)
+  } 40% {
+    transform: translateX(0rem)
+  } 60% {
+    transform: translateX(0rem)
+  } 80% {
+    transform: translateX(0rem)
+  } 100% {
+    transform: translateX(.35rem)
+  }
+}
+@keyframes logo-ring-three {
+  0% {
+    transform: translateX(1.8rem)
+  } 20% {
+    transform: translateX(1.8rem)
+  } 40% {
+    transform: translateX(1.8rem)
+  } 60% {
+    transform: translateX(.35rem)
+  } 80% {
+    transform: translateX(.35rem)
+  } 100% {
+    transform: translateX(1.8rem)
+  }
+}

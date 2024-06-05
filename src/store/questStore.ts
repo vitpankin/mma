@@ -1,6 +1,6 @@
 import { StateCreator } from 'zustand'
 
-import { Quest, QuestSection } from '../models/interfaces'
+import { Quest, QuestSection } from '../types/interfaces'
 import { CombinedSlice } from './store'
 
 export interface QuestSlice {

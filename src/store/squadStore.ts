@@ -1,6 +1,6 @@
 import { StateCreator } from 'zustand'
 
-import { Squad } from '../models/interfaces'
+import { Squad } from '../types/interfaces'
 import { CombinedSlice } from './store'
 
 export interface SquadSlice {

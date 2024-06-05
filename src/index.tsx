@@ -6,6 +6,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import reportWebVitals from './reportWebVitals';
 import { FirestoreProvider } from './cloud/firebase';
+import { SDKProvider } from '@tma.js/sdk-react';
+import { ThemeProvider } from './contexts';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,11 +16,15 @@ const queryClient = new QueryClient();
 
 root.render(
   <React.StrictMode>
-    {/* <QueryClientProvider client={queryClient}> */}
-      {/* <FirestoreProvider> */}
-        <App />
-      {/* </FirestoreProvider> */}
-    {/* </QueryClientProvider> */}
+    <ThemeProvider>
+      <SDKProvider acceptCustomStyles debug>
+      {/* <QueryClientProvider client={queryClient}> */}
+        {/* <FirestoreProvider> */}
+          <App />
+        {/* </FirestoreProvider> */}
+      {/* </QueryClientProvider> */}
+      </SDKProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

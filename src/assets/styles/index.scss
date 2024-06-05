@@ -7,8 +7,10 @@
 
 html, body, #root {
   min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 html {
   height: 100%;
@@ -20,6 +22,7 @@ body {
   background-position: top center;
   background-repeat: repeat-y;
   min-height: 100%;
+  height: 100%;
   width: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Manrope", sans-serif;
   background: var(--tg-theme-bg-color);
@@ -193,5 +196,82 @@ body {
     background-position: -1732px center;
   } 95% {
     background-position: -1823.5px center;
+  } 
+}
+
+
+.ring_spin {
+  height: 90px;
+  width: 90px;
+  background: url("../media/rings_.png");
+  background-size: auto 91.5px;
+  background-position: -2px center;
+  animation: spin .4s step-start infinite;
+  transition: none;
+  outline: none;
+  box-shadow: none;
+  transform: scale(0.5);
+}
+
+
+@keyframes spin {
+  0% {
+    background-position: 0px 0px;
+  } 5% {
+    background-position: -calc(175px*1) 0px;
+  } 10% {
+    background-position: -calc(175px*2) 0px;
+  } 15% {
+    background-position: -calc(175px*3) 0px;
+  } 20% {
+    background-position: -calc(175px*4) 0px;
+  } 25% {
+    background-position: -calc(175px*5) 0px;
+  } 30% {
+    background-position: -calc(175px*6) 0px;
+  } 35% {
+    background-position: -calc(175px*7) 0px;
+  } 40% {
+    background-position: -calc(175px*8) 0px;
+  } 45% {
+    background-position: -calc(175px*9) 0px;
+  } 50% {
+    background-position: -calc(175px*10) 0px;
+  } 55% {
+    background-position: -calc(175px*11) 0px;
+  } 60% {
+    background-position: -calc(175px*12) 0px;
+  } 65% {
+    background-position: -calc(175px*13) 0px;
+  } 70% {
+    background-position: -calc(175px*14) 0px;
+  } 75% {
+    background-position: -calc(175px*15) 0px;
+  } 80% {
+    background-position: -calc(175px*16) 0px;
+  } 85% {
+    background-position: -calc(175px*17) 0px;
+  } 90% {
+    background-position: -calc(175px*18) 0px;
+  } 95% {
+    background-position: -calc(175px*19) 0px;
+  } 55% {
+    background-position: -calc(175px*20) 0px;
+  } 60% {
+    background-position: -calc(175px*1) 0px;
+  } 65% {
+    background-position: -calc(175px*1) 0px;
+  } 70% {
+    background-position: -calc(175px*1) 0px;
+  } 75% {
+    background-position: -calc(175px*1) 0px;
+  } 80% {
+    background-position: -calc(175px*1) 0px;
+  } 85% {
+    background-position: -calc(175px*1) 0px;
+  } 90% {
+    background-position: -calc(175px*1) 0px;
+  } 95% {
+    background-position: -calc(175px*1) 0px;
   } 
 }

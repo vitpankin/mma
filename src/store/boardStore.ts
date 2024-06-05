@@ -1,6 +1,6 @@
 import { StateCreator } from 'zustand'
 
-import { Board } from '../models/interfaces'
+import { Board } from '../types/interfaces'
 import { CombinedSlice } from './store'
 
 export interface BoardSlice {
